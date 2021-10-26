@@ -22,73 +22,248 @@ html {
 
 /*Globales*/
 body {
-    background-color: var(--primary);
-    font-size: 1.6rem;
-    line-height: 1.5;
+  background-color: var(--primary);
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 p {
-    font-size: 1.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--blank);
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blank);
 }
 
 * {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .container {
-    max-width: 120rem;
-    margin: 0 auto;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    color: var(--secondary);
-    font-family: var(--principalFont);
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--secondary);
+  font-family: var(--principalFont);
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-    font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
 h3 {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 
 /*Header*/
 .header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+/*Footer*/
+.footer {
+  background-color: var(--primaryDark);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer__text {
+  font-family: var(--principalFont);
+  text-align: center;
+  font-size: 2.2rem;
+  text-transform: uppercase;
 }
 
 .header__logo {
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 
 .navigation {
-    background-color: var(--primaryDark);
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  background-color: var(--primaryDark);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /*Separacion forma nueva*/
 }
 
 .navigation__link {
-    font-family: var(--principalFont);
-    color: var(--blank);
-    font-size: 3rem;
+  font-family: var(--principalFont);
+  color: var(--blank);
+  font-size: 3rem;
 }
 
 .navigation__link--active,
 .navigation__link:hover {
-    color: var(--secondary);
+  color: var(--secondary);
+}
+
+/*Grid*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/*Media Query*/
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*Productos*/
+.product {
+  background-color: var(--primaryDark);
+  padding: 1rem;
+}
+
+.product__name {
+  font-size: 4rem;
+}
+
+.product__price {
+  font-size: 2.8rem;
+  color: var(--secondary);
+}
+
+.product__name,
+.product__price {
+  font-family: var(--principalFont);
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/*Graficos*/
+.graphic {
+  min-height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1 / 3; /*Horizontal*/
+  background-color: var(--primaryDark);
+}
+
+.graphic--shirts {
+  grid-row: 2 / 3; /*Vertical*/
+  background-image: url(../img/grafico1.jpg);
+}
+
+.graphic--node {
+  background-image: url(../img/grafico2.jpg);
+  grid-row: 8 / 9;
+}
+
+/*Media Query Node*/
+@media (min-width: 768px) {
+  .graphic--node {
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+  }
+}
+
+/*Nosotros*/
+.us {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+.us p {
+  text-align: center;
+}
+
+/*Media Query Nosotros*/
+@media (min-width: 768px) {
+  .us {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.us__image {
+  grid-row: 1 / 2;
+}
+
+/*Media Query Imagen Nosotros*/
+@media (min-width: 768px) {
+  .us__image {
+    grid-column: 2 / 3;
+  }
+}
+
+/*Blocks*/
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .block {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.block {
+  text-align: center;
+}
+
+.block__title {
+  margin: 0;
+}
+
+/*Pagina del Producto*/
+@media (min-width: 768px) {
+  .shirt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.shirt__image {
+  width: 100%;
+}
+
+/*Formulario*/
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.form__field {
+  /* border-width: 1rem, border-style: solid, border-color: var(--primaryDark)*/
+  border: 1rem solid var(--primaryDark);
+  background-color: transparent;
+  color: var(--blank);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+.form__submit {
+  background-color: var(--secondary);
+  border: none;
+  font-size: 2rem;
+  font-family: var(--principalFont);
+  padding: 2rem;
+  transition: background-color .3s ease;
+  grid-column: 1 / 3;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  background-color: var(--secondaryDark);
 }

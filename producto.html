@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img class="header__logo" src="img/logo.png" alt="Logotipo" />
+      </a>
+    </header>
+
+    <nav class="navigation">
+      <a class="navigation__link navigation__link--active" href="index.html"
+        >Tienda</a
+      >
+      <a class="navigation__link" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="container">
+      <h1>React JS</h1>
+
+      <div class="shirt">
+        <img class="shirt__image" src="img/3.jpg" alt="Imagen del Producto" />
+
+        <div class="shirt__content">
+          <p>
+            Donec dapibus lacus tincidunt magna varius, et tincidunt nunc
+            semper, nam dictum rhoncus nulla sed hendrerit. Phasellus efficitur
+            volutpat.
+          </p>
+
+          <form class="form">
+            <select class="form__field">
+              <option disabled selected>-- Seleccionar Talla --</option>
+              <option>Pequeña</option>
+              <option>Mediana</option>
+              <option>Grande</option>
+            </select>
+            <input class="form__field" type="number" placeholder="Cantidad" min="1" />
+            <input class="form__submit " type="submit" value="Agregar al Carrito" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        Front End Store -- Todos los derechos reservados 2021
+      </p>
+    </footer>
+  </body>
+</html>
